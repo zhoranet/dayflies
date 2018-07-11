@@ -1,0 +1,27 @@
+.app-sidenav-container {
+    flex: 1;        
+  }
+
+  // .app-sidenav-content {    
+  //   height: 100%;    
+  // }
+
+  .app-sidenav {
+    width: 280px;
+  }
+
+  .wrapper {
+    margin: 30px;
+  }
+
+  .menu-label {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-right: 20px;
+  }
+
+  .app-calendar {
+    height: 320px;
+  }

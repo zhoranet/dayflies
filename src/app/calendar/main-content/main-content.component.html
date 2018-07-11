@@ -1,0 +1,22 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+        <div fxLayout="row" fxLayoutAlign="space-around center">
+            <button mat-icon-button (click)="loadPreviousEvent()">
+              <mat-icon aria-label="Previous event">navigate_before</mat-icon>
+            </button>        
+            <h2>{{(eventInfo$ | async).name}}</h2>
+            <button mat-icon-button (click)="loadNextEvent()">
+                <mat-icon aria-label="Next event">navigate_next</mat-icon>
+            </button>      
+        </div>
+          
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+      
+
+      
+      {{(eventInfo$ | async).full}}
+  </mat-card-content>
+</mat-card>

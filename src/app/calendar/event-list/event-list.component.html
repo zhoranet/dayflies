@@ -1,0 +1,9 @@
+<mat-card>
+  <div *ngFor="let eventInfo of eventList$ | async">
+    <div><h3>{{eventInfo.name}}</h3></div>
+    <div>
+      {{eventInfo.short}}       
+      <a  *ngIf="eventInfo.full.length > eventInfo.short.length" routerLink="{{eventInfo.id}}">more...</a>
+    </div>
+  </div>
+</mat-card>

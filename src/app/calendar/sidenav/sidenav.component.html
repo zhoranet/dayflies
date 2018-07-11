@@ -1,0 +1,25 @@
+<app-header></app-header>
+<mat-sidenav-container class="app-sidenav-container">
+  <mat-sidenav #sidenav [mode]="isScreenSmall() ? 'over' : 'side'" [opened]="!isScreenSmall()" class="app-sidenav mat-elevation-z0">
+    <div class="wrapper">
+      <mat-calendar class="app-calendar"  (selectedChange)="changeDate($event)"></mat-calendar>
+      <div fxLayout="row">
+        <div class="menu-label">Language:</div>
+        <div >
+          <button mat-raised-button [matMenuTriggerFor]="menu" color="primary">
+            {{currentLanguage.name}}
+          </button>
+          <mat-menu #menu="matMenu"  >
+            <button mat-menu-item (click)="changeLanuguage($event)" *ngFor="let language of languages">{{language.name}}</button>
+          </mat-menu>
+        </div>
+      </div>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content class="app-sidenav-content">
+    <div class="wrapper">
+      <router-outlet></router-outlet>
+    </div>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
